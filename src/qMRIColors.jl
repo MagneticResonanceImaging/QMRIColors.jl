@@ -11,7 +11,7 @@ Applies a color mapping to a numerical array `x` based on a specified relaxation
 This function is commonly used in data visualization, especially for MRI relaxation maps, to display data in a color-coded format for easier interpretation.
 
 # Arguments
-- `maptype::AbstractString`: The relaxation map type to use for color mapping. Common values include `"T1"`, `"T2"`, `"R1"`, `"R2"`, etc.
+- `maptype::AbstractString`: The relaxation map type to use for color mapping. Common values include `"T1"`, `"T2"`, `"R1"`, `"R2"`, (see documentation).
 - `x::AbstractArray`: An array of numerical values to be color-mapped.
 - `loLev`: Lower bound for color mapping. Defaults to the minimum of `x`.
 - `upLev`: Upper bound for color mapping. Defaults to the maximum of `x`.
