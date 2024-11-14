@@ -18,6 +18,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/atrotier/qMRIColors.jl",
+    repo="github.com/aTrotier/qMRIColors.jl",
     devbranch="main",
 )
