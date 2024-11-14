@@ -1,6 +1,7 @@
 ```@example 2
 using FileIO
 using Downloads
+using qMRIColors
 
 url = "https://github.com/mfuderer/colorResources/raw/refs/heads/main/sampleT1map.jld"
 dest_path = "sampleT1map.jld"
