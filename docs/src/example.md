@@ -5,7 +5,7 @@ The generated colormap can be easily integrated with multiple plotting library l
 - Plots.jl
 - PythonPlot.jl / PyPlot.jl
 
-# Makie example
+# Makie.jl
 
 For `Makie.jl` the colormap can be directly used like `heatmap(x,colormap=cmap,colorrange=(loLev,upLev))`
 
