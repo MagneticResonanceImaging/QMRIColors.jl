@@ -1,5 +1,6 @@
 The generated colormap can be easily integrated with multiple plotting library like :
 - Makie.jl
+- Plots.jl
 - PyPlot.jl
 
 # Makie example
@@ -41,19 +42,43 @@ end
 ```
 
 
-# PyPlot example
+# Plots.jl
 
-PyPlot requires to first onvert the cmap to an exploitable format by PyPlot :
+Using GR backend
+```@example 3
+using FileIO
+using qMRIColors
 
-```@example 2
-using PyPlot
+x = FileIO.load("sampleT1map.jld")["sampleT1map"]
 
-cmap_py = PyPlot.ColorMap("relaxationColor", cmap, length(cmap), 1.0) # translating the colormap to a format digestible by 
-    
-figure()
-PyPlot.imshow(imClip, vmin=loLev, vmax =upLev, interpolation="bicubic", cmap=cmap_py)
-colorbar()
-savefig("pyplot.png"); nothing # hide
+loLev = 700
+upLev = 1500
+cmap,imClip = relaxationColorMap("T1",x,loLev,upLev)
+
+using Plots #GR backend
+gr()
+p = Plots.heatmap(imClip,c=cmap,clim=(loLev,upLev),yflip=true)
 ```
 
-![pyplot](pyplot.png)
+# PythonPlot.jl / PyPlot.jl
+The colormap needs to be converted to a usable format with the following command : `cmap_py = PythonPlot.ColorMap("relaxationColor", cmap, length(cmap), 1.0)` 
+
+```@example 4
+using FileIO
+using qMRIColors
+
+x = FileIO.load("sampleT1map.jld")["sampleT1map"]
+
+loLev = 700
+upLev = 1500
+cmap,imClip = relaxationColorMap("T1",x,loLev,upLev)
+
+using PythonPlot
+cmap_py = PythonPlot.ColorMap("relaxationColor", cmap, length(cmap), 1.0) # translating the colormap to a format digestible by PythonPlot
+
+figure()
+imshow(imClip, vmin=loLev, vmax =upLev, interpolation="bicubic", cmap=cmap_py)
+colorbar()
+PythonPlot.savefig("plot.png")
+```
+![](plot.png)
