@@ -1,7 +1,9 @@
+# Example
+
 The generated colormap can be easily integrated with multiple plotting library like :
-- Makie.jl
+- Makie.jl (recommended)
 - Plots.jl
-- PyPlot.jl
+- PythonPlot.jl / PyPlot.jl
 
 # Makie example
 
@@ -56,8 +58,12 @@ upLev = 1500
 cmap,imClip = relaxationColorMap("T1",x,loLev,upLev)
 
 using Plots #GR backend
-gr()
-p = Plots.heatmap(imClip,c=cmap,clim=(loLev,upLev),yflip=true)
+gr(size=(400,300))
+p = Plots.heatmap(imClip,
+            c=cmap,
+            clim=(loLev,upLev),
+            yflip=true
+            )
 ```
 
 # PythonPlot.jl / PyPlot.jl
