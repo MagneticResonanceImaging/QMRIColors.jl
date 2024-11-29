@@ -37,4 +37,4 @@ distinction is lost between invalid values and low-but-valid values. See second 
 example below: it represents a circular object with a T1 value that is gradually increasing
 from top to bottom, but only valid within a circular "object", the outside thereof representing 
 unknown T1 values. </p>
-[![Figure 1](./rangeNoRange.jpg)]
+![Figure 1](./rangeNoRange.jpg)
