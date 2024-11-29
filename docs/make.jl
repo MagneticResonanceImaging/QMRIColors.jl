@@ -14,7 +14,9 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Example" => "example.md",
+        "qMRI colormaps" => "colormaps.md",
+        "Plot packages" => "example.md",
+        "Important Tips" => "clip.md",
         "API" => "api.md",
     ],
 )

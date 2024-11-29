@@ -4,57 +4,10 @@ CurrentModule = qMRIColors
 
 Documentation for [qMRIColors](https://github.com/atrotier/qMRIColors.jl).
 
+Julia package of https://github.com/mfuderer/colorResources
 
-# Colormaps available
+This package goes with the guideline paper published in Magnetic Resonance in Medicine, https://doi.org/10.1002/mrm.30290, Color-map recommendation for MR relaxomtry maps 
 
-```@example 1
-using qMRIColors
-using CairoMakie
-```
+It is to be used to display quantitative maps of T1, R1, T2, R2, T2*, R2*, T1rho and R1rho.
 
-## Lipari
-
-This colormap is used for :
-- T1
-
-```@example 1
-cmap = relaxationColorMap("T1")
-cgrad(cmap)
-```
-
-## Navia
-
-This colormap is used for :
-- T2
-- T2*
-- T1rho
-- T1ρ
-
-```@example 1
-cmap = relaxationColorMap("T2")
-cgrad(cmap)
-```
-
-## Reverse lipari
-
-This colormap is used for :
-- R1
-
-```@example 1
-cmap = relaxationColorMap("R1")
-cgrad(cmap)
-```
-
-
-## Reverse navia
-
-This colormap is used for :
-- R2
-- R2*
-- R1rho
-- R1ρ
-- 
-```@example 1
-cmap = relaxationColorMap("R2")
-cgrad(cmap)
-```
+The package contains the Lipari color map, the Navia color map as well as the logarithm-processing as referred to by the publication.
