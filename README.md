@@ -32,3 +32,9 @@ cmap = relaxationColorMap("T1")
 VIEW(x,c=cmap) # Do not use range limits here! 
 ```
 <p>Again, "VIEW" refers to your favorite viewing software.</p>
+<p><br>If the simplified processing is invoked WITH use of range limits, then the 
+distinction is lost between invalid values and low-but-valid values. See second image in the 
+example below: it represents a circular object with a T1 value that is gradually increasing
+from top to bottom, but only valid within a circular "object", the outside thereof representing 
+unknown T1 values. </p>
+[![Figure 1](./rangeNoRange.jpg)]
