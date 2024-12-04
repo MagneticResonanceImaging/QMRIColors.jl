@@ -8,7 +8,7 @@ makedocs(;
     authors="aTrotier <a.trotier@gmail.com> and contributors",
     sitename="qMRIColors.jl",
     format=Documenter.HTML(;
-        canonical="https://atrotier.github.io/qMRIColors.jl",
+        canonical="https://magneticresonanceimaging.github.io/qMRIColors.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -22,6 +22,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/aTrotier/qMRIColors.jl",
+    repo="github.com/magneticresonanceimaging/qMRIColors.jl",
     devbranch="main",
 )

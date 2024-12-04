@@ -2,7 +2,7 @@
 CurrentModule = qMRIColors
 ```
 
-Documentation for [qMRIColors](https://github.com/atrotier/qMRIColors.jl).
+Documentation for [qMRIColors](https://github.com/magneticresonanceimaging/qMRIColors.jl).
 
 Julia package of https://github.com/mfuderer/colorResources
 
