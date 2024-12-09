@@ -18,7 +18,7 @@ The package contains multiple [qMRI colormaps](@ref) :
 - Navia color map 
 
 !!! tip
-    In addition the code also provides access to the logarithm-processing as referred to by the publication. Take a look at [Important Tips](@ref) for more information
+    In addition the code also provides access to the logarithm-processing as referred to by the publication. Take a look at [Important tips](@ref) for more information
 
 The color maps are compatible with various [Plot packages](@ref) :
 - Makie.jl
