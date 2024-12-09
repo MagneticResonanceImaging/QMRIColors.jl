@@ -1,4 +1,4 @@
-name = "QMRIColors"
+name = "QuantitativeMRIColors"
 uuid = "2bec176e-9e8c-4764-a62f-295118d1ec05"
 authors = ["aTrotier <a.trotier@gmail.com> and contributors"]
 version = "1.0.0"

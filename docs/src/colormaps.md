@@ -1,7 +1,7 @@
 # qMRI colormaps
 
 ```@example 1
-using QMRIColors
+using QuantitativeMRIColors
 using CairoMakie
 ```
 

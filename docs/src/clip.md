@@ -6,7 +6,7 @@ The "imclip" image should retain the distinction between the "invalid" value of 
 A simplified processing can be done by
 
 ```julia
-using QMRIColors
+using QuantitativeMRIColors
 cmap = relaxationColorMap("T1")
 VIEW(x,c=cmap) # Do not use range limits here! 
 ```
@@ -23,7 +23,7 @@ Let's build an example to see the effect.
 ## Create a Synthetic phantom
 
 ```@example clip
-using QMRIColors
+using QuantitativeMRIColors
 using CairoMakie
 
 # -----  Make test object: gradually increasing T1, but invalid outside a circle
