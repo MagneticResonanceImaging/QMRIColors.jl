@@ -22,6 +22,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/magneticresonanceimaging/qMRIColors.jl",
+    repo="github.com/MagneticResonanceImaging/qMRIColors.jl",
     devbranch="main",
 )
