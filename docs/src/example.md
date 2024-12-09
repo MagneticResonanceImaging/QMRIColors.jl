@@ -1,4 +1,4 @@
-# Example
+# Plot packages
 
 The generated colormap can be easily integrated with multiple plotting library like :
 - Makie.jl (recommended)

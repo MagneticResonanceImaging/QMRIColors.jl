@@ -16,7 +16,7 @@ makedocs(;
         "Home" => "index.md",
         "qMRI colormaps" => "colormaps.md",
         "Plot packages" => "example.md",
-        "Important Tips" => "clip.md",
+        "Important tips" => "clip.md",
         "API" => "api.md",
     ],
 )

@@ -1,5 +1,4 @@
-
-# Colormaps available
+# qMRI colormaps
 
 ```@example 1
 using qMRIColors
