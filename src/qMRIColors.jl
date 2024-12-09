@@ -1,4 +1,4 @@
-module QuantitativeMRIColors
+module QMRIColors
 
 export relaxationColorMap, colorLogRemap, read_map_csv
 using Colors
