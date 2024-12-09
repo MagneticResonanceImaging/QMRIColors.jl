@@ -1,4 +1,4 @@
-name = "qMRIColors"
+name = "QMRIColors"
 uuid = "2bec176e-9e8c-4764-a62f-295118d1ec05"
 authors = ["aTrotier <a.trotier@gmail.com> and contributors"]
 version = "1.0.0"
@@ -9,6 +9,7 @@ DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 
 [compat]
 julia = "1.10"
+Colors = "0.13"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

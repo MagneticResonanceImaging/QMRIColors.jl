@@ -73,6 +73,6 @@ jobs:
         shell: julia --project=docs --color=yes {0}
         run: |
           using Documenter: DocMeta, doctest
-          using qMRIColors
-          DocMeta.setdocmeta!(qMRIColors, :DocTestSetup, :(using qMRIColors); recursive=true)
-          doctest(qMRIColors)
+          using QMRIColors
+          DocMeta.setdocmeta!(QMRIColors, :DocTestSetup, :(using QMRIColors); recursive=true)
+          doctest(QMRIColors)

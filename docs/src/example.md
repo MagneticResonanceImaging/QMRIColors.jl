@@ -9,7 +9,7 @@ Download sample used in the following example
 ```@example 3
 using FileIO
 using Downloads
-using qMRIColors
+using QMRIColors
 using CairoMakie
 
 url = "https://github.com/mfuderer/colorResources/raw/refs/heads/main/sampleT1map.jld"
@@ -25,7 +25,7 @@ nothing # hide
 For `Makie.jl` the colormap can be directly used like `heatmap(x,colormap=cmap,colorrange=(loLev,upLev))`
 
 ```@example 3
-using qMRIColors
+using QMRIColors
 using CairoMakie
 
 # -----  Make test object: gradually increasing T1, but invalid outside a circle
@@ -69,7 +69,7 @@ end
 Using GR backend
 
 ```@example 3
-using qMRIColors
+using QMRIColors
 using Plots #GR backend
 
 loLev = 700
@@ -90,7 +90,7 @@ The colormap needs to be converted to a usable format with the following command
 
 ```@example 4
 using FileIO
-using qMRIColors
+using QMRIColors
 
 x = FileIO.load("sampleT1map.jld")["sampleT1map"]
 
