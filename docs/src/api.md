@@ -2,5 +2,5 @@
 ```
 
 ```@autodocs
-Modules = [QuantitativeMRIColors]
+Modules = [QMRIColors]
 ```

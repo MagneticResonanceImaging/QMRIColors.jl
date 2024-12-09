@@ -1,14 +1,14 @@
-using QuantitativeMRIColors
+using QMRIColors
 using Documenter
 
-DocMeta.setdocmeta!(QuantitativeMRIColors, :DocTestSetup, :(using QuantitativeMRIColors); recursive=true)
+DocMeta.setdocmeta!(QMRIColors, :DocTestSetup, :(using QMRIColors); recursive=true)
 
 makedocs(;
-    modules=[QuantitativeMRIColors],
+    modules=[QMRIColors],
     authors="aTrotier <a.trotier@gmail.com> and contributors",
-    sitename="QuantitativeMRIColors.jl",
+    sitename="QMRIColors.jl",
     format=Documenter.HTML(;
-        canonical="https://magneticresonanceimaging.github.io/QuantitativeMRIColors.jl",
+        canonical="https://magneticresonanceimaging.github.io/QMRIColors.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -22,6 +22,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/MagneticResonanceImaging/QuantitativeMRIColors.jl",
+    repo="github.com/MagneticResonanceImaging/QMRIColors.jl",
     devbranch="main",
 )

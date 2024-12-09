@@ -1,8 +1,8 @@
 ```@meta
-CurrentModule = QuantitativeMRIColors
+CurrentModule = QMRIColors
 ```
 
-Documentation for [QuantitativeMRIColors](https://github.com/magneticresonanceimaging/QuantitativeMRIColors.jl).
+Documentation for [QMRIColors](https://github.com/magneticresonanceimaging/QMRIColors.jl).
 
 # Introduction
 

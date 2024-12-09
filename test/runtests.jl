@@ -1,8 +1,8 @@
-using QuantitativeMRIColors
+using QMRIColors
 using Colors
 using Test
 
-@testset "QuantitativeMRIColors.jl" begin
+@testset "QMRIColors.jl" begin
 
     @testset "colormap" begin
     # T1 test
