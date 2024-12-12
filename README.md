@@ -8,6 +8,8 @@
 
 Julia package of https://github.com/mfuderer/colorResources
 
+![](docs/src/assets/logo.svg)
+
 > [!NOTE]
 > <p>This package goes with the guideline paper published in Magnetic Resonance in Medicine, https://doi.org/10.1002/mrm.30290, <em> Color-map recommendation for MR relaxomtry maps </em>.</p>
 
