@@ -7,10 +7,15 @@ A simplified processing can be done by
 
 ```julia
 using QMRIColors
-cmap = relaxationColorMap("T1")
-VIEW(x,c=cmap) # Do not use range limits here! 
+rgb_vec = relaxationColorMap("T1")
+VIEW(x,c=rgb_vec) # Do not use range limits here! 
 ```
-Again, "VIEW" refers to your favorite viewing software.
+Again, "VIEW" refers to your favorite viewing software. But if that is Python, you should use
+```julia
+using QMRIColors
+cmap = relaxationColorMapPy("T1")    # note the 'Py' in the function name!
+imshow(x,cmap=cmap) # Do not use range limits here! 
+```
 
 If the simplified processing is invoked WITH use of range limits, then the 
 distinction is lost between invalid values and low-but-valid values. See second image in the 
@@ -48,20 +53,20 @@ upLev = 2000
 begin
   f=CairoMakie.Figure()
   ax=Axis(f[1,1],aspect = DataAspect(),title = "Using imClip")
-  cmap,imClip = relaxationColorMap("T1",testT1,loLev,upLev)
-  h=heatmap!(ax,rotr90(imClip),colormap=cmap,colorrange=(loLev,upLev))
+  rgb_vec,imClip = relaxationColorMap("T1",testT1,loLev,upLev)
+  h=heatmap!(ax,rotr90(imClip),colormap=rgb_vec,colorrange=(loLev,upLev))
   Colorbar(f[1,2],h)
   hidedecorations!(ax)
 
   ax=Axis(f[2,1],aspect = DataAspect(),title = "wrong: simplified, \n with range")
-  cmap = relaxationColorMap("T1")
-  h=heatmap!(ax,rotr90(testT1),colormap=cmap,colorrange=(loLev,upLev))
+  rgb_vec = relaxationColorMap("T1")
+  h=heatmap!(ax,rotr90(testT1),colormap=rgb_vec,colorrange=(loLev,upLev))
   Colorbar(f[2,2],h)
   hidedecorations!(ax)
 
   ax=Axis(f[3,1],aspect = DataAspect(),title = "OK: simplified, \n no range")
-  cmap = relaxationColorMap("T1")
-  h=heatmap!(ax,rotr90(testT1),colormap=cmap)
+  rgb_vec = relaxationColorMap("T1")
+  h=heatmap!(ax,rotr90(testT1),colormap=rgb_vec)
   Colorbar(f[3,2],h)
   hidedecorations!(ax)
 
@@ -78,6 +83,6 @@ end
 Use the clip version of the images + colormap + the color range
 
 ```julia
- cmap,imClip = relaxationColorMap("T1",testT1,loLev,upLev)
-heatmap(rotr90(imClip),colormap=cmap,colorrange=(loLev,upLev))
+rgb_vec,imClip = relaxationColorMap("T1",testT1,loLev,upLev)        # or relaxationColorMapPy for Pyplot
+heatmap(rotr90(imClip),colormap=rgb_vec,colorrange=(loLev,upLev))
 ```

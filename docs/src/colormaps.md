@@ -11,8 +11,8 @@ This colormap is used for :
 - T1
 
 ```@example 1
-cmap = relaxationColorMap("T1")
-cgrad(cmap)
+rgb_vec = relaxationColorMap("T1")
+cgrad(rgb_vec)
 ```
 
 ## Navia
@@ -24,8 +24,8 @@ This colormap is used for :
 - T1ρ
 
 ```@example 1
-cmap = relaxationColorMap("T2")
-cgrad(cmap)
+rgb_vec = relaxationColorMap("T2")
+cgrad(rgb_vec)
 ```
 
 ## Reverse lipari
@@ -34,8 +34,8 @@ This colormap is used for :
 - R1
 
 ```@example 1
-cmap = relaxationColorMap("R1")
-cgrad(cmap)
+rgb_vec = relaxationColorMap("R1")
+cgrad(rgb_vec)
 ```
 
 
@@ -48,6 +48,6 @@ This colormap is used for :
 - R1ρ
 - 
 ```@example 1
-cmap = relaxationColorMap("R2")
-cgrad(cmap)
+rgb_vec = relaxationColorMap("R2")
+cgrad(rgb_vec)
 ```
