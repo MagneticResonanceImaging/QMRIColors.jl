@@ -3,7 +3,6 @@ module QMRIColors
 export relaxationColorMap, colorLogRemap, read_map_csv
 using Colors
 using DelimitedFiles
-using PythonPlot
 """
     relaxationColorMap(maptype::AbstractString, x::AbstractArray, loLev=minimum(x), upLev=maximum(x))
 
