@@ -1,9 +1,8 @@
 module QMRIColors
 
-export relaxationColorMap, relaxationColorMapPy, colorLogRemap, read_map_csv
+export relaxationColorMap, colorLogRemap, read_map_csv
 using Colors
 using DelimitedFiles
-using PythonPlot
 """
     relaxationColorMap(maptype::AbstractString, x::AbstractArray, loLev=minimum(x), upLev=maximum(x))
 
@@ -49,31 +48,6 @@ function relaxationColorMap(maptype::AbstractString, x::AbstractArray, loLev=min
 end
 
 """
-    relaxationColorMapPy(maptype::AbstractString, x::AbstractArray, loLev=minimum(x), upLev=maximum(x))
-
-See `relaxationColorMap`. This function is a wrapper for `relaxationColorMap` that converts the output to a Python-compatible format.
-    
-# Arguments
-- `maptype::AbstractString`: The relaxation map type to use for color mapping. Common values include `"T1"`, `"T2"`, `"R1"`, `"R2"`, (see documentation).
-- `x::AbstractArray`: An array of numerical values to be color-mapped.
-- `loLev`: Lower bound for color mapping. Defaults to the minimum of `x`.
-- `upLev`: Upper bound for color mapping. Defaults to the maximum of `x`.
-
-# Returns
-- `cmap`: PythonPlot-compatible ColorMap structure.
-- `xClip`: A modified version of `x` with values adjusted based on `loLev` and `upLev`.
-
-# Description
-Wrapper around `relaxationColorMap` that converts the output to a Python-compatible format.
-
-"""
-function relaxationColorMapPy(maptype::AbstractString, x::AbstractArray, loLev=minimum(x), upLev=maximum(x))
-    rgb_vec, xClip = relaxationColorMap(maptype, x, loLev, upLev)
-    cmap= PythonPlot.ColorMap("relaxationColor", rgb_vec, length(rgb_vec), 1.0) # translating the colormap to a format digestible by PythonPlot
-    return cmap, xClip
-end
-
-"""
     relaxationColorMap(maptype::AbstractString, loLev=0, upLev=256)
 
 Simplified variant of relaxationColorMap(). Only to be used if lolev is not used.
@@ -83,17 +57,6 @@ function relaxationColorMap(maptype::AbstractString)
   lutCmap = colorLogRemap(colortable,0,256)
   rgb_vec = map(rgb -> Colors.RGB(rgb...), eachrow(lutCmap))
   return rgb_vec
-end
-
-"""
-    relaxationColorMapPy(maptype::AbstractString, loLev=0, upLev=256)
-
-Simplified variant of relaxationColorMapPy(). Only to be used if lolev is not used.
-"""
-function relaxationColorMapPy(maptype::AbstractString)
-    rgb_vec = relaxationColorMap(maptype)
-    cmap= PythonPlot.ColorMap("relaxationColor", rgb_vec, length(rgb_vec), 1.0) # translating the colormap to a format digestible by PythonPlot
-    return cmap
 end
 
 function read_map_csv(maptype::AbstractString)
