@@ -10,12 +10,7 @@ using QMRIColors
 rgb_vec = relaxationColorMap("T1")
 VIEW(x,c=rgb_vec) # Do not use range limits here! 
 ```
-Again, "VIEW" refers to your favorite viewing software. But if that is Python, you should use
-```julia
-using QMRIColors
-cmap = relaxationColorMapPy("T1")    # note the 'Py' in the function name!
-imshow(x,cmap=cmap) # Do not use range limits here! 
-```
+Again, "VIEW" refers to your favorite viewing software.
 
 If the simplified processing is invoked WITH use of range limits, then the 
 distinction is lost between invalid values and low-but-valid values. See second image in the 
@@ -83,6 +78,6 @@ end
 Use the clip version of the images + colormap + the color range
 
 ```julia
-rgb_vec,imClip = relaxationColorMap("T1",testT1,loLev,upLev)        # or relaxationColorMapPy for Pyplot
+rgb_vec,imClip = relaxationColorMap("T1",testT1,loLev,upLev)
 heatmap(rotr90(imClip),colormap=rgb_vec,colorrange=(loLev,upLev))
 ```
