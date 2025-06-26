@@ -39,3 +39,6 @@ cmap = relaxationColorMap("T1")
 VIEW(x,c=cmap) # Do not use range limits here! 
 ```
 <p>Again, "VIEW" refers to your favorite viewing software.</p>
+
+## Python alternative
+A python alternative is also in current development : https://github.com/oscarvanderheide/qmricolors
