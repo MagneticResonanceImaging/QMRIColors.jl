@@ -11,7 +11,7 @@ This package goes with the guideline paper published in Magnetic Resonance in Me
 It is to be used to display quantitative maps of T1, R1, T2, R2, T2*, R2*, T1rho and R1rho.
 
 !!! note
-    The initial Julia implementation is available [here](https://github.com/mfuderer/colorResources)
+    The initial Julia implementation is available [here](https://github.com/mfuderer/colorResources) as well as a [python implementation](https://github.com/oscarvanderheide/qmricolors)
 
 The package contains multiple [qMRI colormaps](@ref) :
 - Lipari color map
